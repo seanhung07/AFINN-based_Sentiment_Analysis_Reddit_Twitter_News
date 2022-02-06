@@ -8,9 +8,9 @@ async function getData(){
     let topic = document.getElementById("search-input").value;
     topic = topic.split(" ").join("")
     console.log(topic)
-    const res = await axios.post(`http://hungs.work:9999/reddit?topic=${topic}`)
-    const tw = await axios.post(`http://hungs.work:9999/result?topic=${topic}`)
-    const news = await axios.post(`http://hungs.work:9999/news?topic=${topic}`)
+    const res = await axios.post(`http://127.0.0.1:3000/reddit?topic=${topic}`)
+    const tw = await axios.post(`http://127.0.0.1:3000/result?topic=${topic}`)
+    const news = await axios.post(`http://127.0.0.1:3000/news?topic=${topic}`)
     const text = document.getElementById('text')
     text.innerHTML=""
     for(let i = 0; i< res.data.length;i++){
@@ -65,7 +65,7 @@ async function getData(){
 }
 async function getTotal(){
     let ID = document.getElementById('data')
-    const total = await axios.get(`http://hungs.work:9999/data`)
+    const total = await axios.get(`http://127.0.0.1:3000/data`)
     Swal.fire({
         icon: 'info',
         title: 'Result',
