@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const langdetect = require('langdetect');
 const TOKEN = process.env.BEARER_TOKEN
 const NEWSAPI = process.env.NEWS_API
-const port = 3000
+const port = 9999
 const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}) )
@@ -149,6 +149,6 @@ function getUniqueListBy(arr, key) {
 }
 
 app.listen(port, () => {
-	console.log('Listening on *:3000')
+	console.log('Listening on *:9999')
 })
 
