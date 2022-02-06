@@ -149,6 +149,6 @@ function getUniqueListBy(arr, key) {
 }
 
 app.listen(port, () => {
-	console.log('Listening on *:9999')
+	console.log('Listening *:9999')
 })
 
